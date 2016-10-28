@@ -29,7 +29,9 @@
         "integrated":"integrated"
     },
     "dependencies":{
-        "coldbox":"^4.3.0+188",
+        "coldbox":"^4.3.0+188"
+    },
+    "devDependencies":{
         "testbox":"^2.3.0+00044",
         "integrated":"^3.0.2"
     }
