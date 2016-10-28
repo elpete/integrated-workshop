@@ -51,6 +51,9 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#event.buildLink( "main.about" )#">About Us</a></li>
+				</ul>
 				<!---About --->
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
