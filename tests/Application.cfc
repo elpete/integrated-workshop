@@ -21,4 +21,8 @@ component{
 
 	this.javaSettings = { loadPaths = [ "integrated/lib" ], reloadOnChange = false };
 
+	function onRequestStart(string targetPage) {
+		applicationStop();
+	}
+
 }

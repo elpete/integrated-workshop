@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="col-md-7">
-			<h1>#prc.welcomeMessage#</h1>
+			<h1>#rc.welcomeMessage#</h1>
 			<p>
 				You are now running <strong>#getSetting("codename",1)# #getSetting("version",1)# (#getsetting("suffix",1)#)</strong>.
 				Welcome to the next generation of ColdFusion (CFML) applications.  You can now start building your application with ease, we already did the hard work
