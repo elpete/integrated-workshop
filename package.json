@@ -1,0 +1,16 @@
+{
+  "name": "integrated-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:elpete/integrated-workshop.git",
+    "type": "git"
+  },
+  "author": "Eric Peterson <eric@elpete.com>",
+  "license": "MIT",
+  "dependencies": {
+    "coldbox-elixir": "^2.0.0",
+    "coldbox-elixir-browsersync": "^1.2.0",
+    "gulp": "^3.9.1"
+  }
+}
