@@ -6,10 +6,16 @@
     "installPaths":{
         "testbox":"testbox",
         "coldbox":"coldbox",
-        "integrated":"integrated"
+        "integrated":"integrated",
+        "flashmessage":"modules/flashmessage",
+        "cborm":"modules/cborm",
+        "orm-reload-interceptor":"modules/orm-reload-interceptor"
     },
     "dependencies":{
-        "coldbox":"^4.3.0+188"
+        "coldbox":"^4.3.0+188",
+        "flashmessage":"^1.2.2",
+        "cborm":"^1.2.2+35",
+        "orm-reload-interceptor":"^1.0.2"
     },
     "devDependencies":{
         "testbox":"^2.3.0+00044",

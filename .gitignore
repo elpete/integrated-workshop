@@ -3,3 +3,4 @@ integrated
 coldbox
 testbox
 node_modules
+*.db

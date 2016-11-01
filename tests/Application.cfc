@@ -21,6 +21,29 @@ component{
 
 	this.javaSettings = { loadPaths = [ "integrated/lib" ], reloadOnChange = false };
 
+	// Set up Testing Datasource
+	this.datasources[ "integrated_workshop" ] = {
+	    class: 'org.h2.Driver',
+	    connectionString: 'jdbc:h2:mem:integrated_workshop;MODE=MySQL',
+	    username = "sa"
+	};
+
+	this.datasource = "integrated_workshop";
+
+	// Set up ORM
+	this.mappings[ "/cborm" ] = rootPath & "modules/cborm";
+
+	this.ormEnabled = true;
+	this.ormSettings = {
+	    cfclocation = [ "models" ],
+	    dbcreate = "dropcreate",
+	    logSQL = true,
+	    flushAtRequestEnd = false,
+	    autoManageSession = false,
+	    eventHandling = true,
+	    eventHandler = "cborm.models.EventHandler"
+	};
+
 	function onRequestStart(string targetPage) {
 		applicationStop();
 	}

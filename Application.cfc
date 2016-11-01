@@ -19,6 +19,29 @@ component{
 	// COLDBOX APPLICATION KEY OVERRIDE
 	COLDBOX_APP_KEY 		 = "";
 
+	// Set up Testing Datasource
+	this.datasources[ "integrated_workshop" ] = {
+	    class: 'org.h2.Driver',
+	    connectionString: 'jdbc:h2:integrated_workshop;MODE=MySQL',
+	    username = "sa"
+	};
+
+	this.datasource = "integrated_workshop";
+
+	// Set up ORM
+	this.mappings[ "/cborm" ] = COLDBOX_APP_ROOT_PATH & "modules/cborm";
+
+	this.ormEnabled = true;
+	this.ormSettings = {
+	    cfclocation = [ "models" ],
+	    dbcreate = "update",
+	    logSQL = true,
+	    flushAtRequestEnd = false,
+	    autoManageSession = false,
+	    eventHandling = true,
+	    eventHandler = "cborm.models.EventHandler"
+	};
+
 	// application start
 	public boolean function onApplicationStart(){
 		application.cbBootstrap = new coldbox.system.Bootstrap( COLDBOX_CONFIG_FILE, COLDBOX_APP_ROOT_PATH, COLDBOX_APP_KEY, COLDBOX_APP_MAPPING );

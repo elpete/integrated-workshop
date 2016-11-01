@@ -47,38 +47,46 @@
 				    <span class="icon-bar"></span>
 				</button>
 				<!---Branding --->
-				<a class="navbar-brand" href="#event.buildLink('')#"><strong>Home</strong></a>
+				<a class="navbar-brand" href="#event.buildLink('')#"><strong>Integrated Workshop</strong></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="#event.buildLink( "main.about" )#">About Us</a></li>
 				</ul>
-				<!---About --->
+				<!---Log In --->
 				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="##" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="glyphicon glyphicon-info-sign"></i> About <b class="caret"></b>
-						</a>
-						<ul id="actions-submenu" class="dropdown-menu">
-							 <li><a href=""><strong>#getSetting("codename",1)# (#getsetting("suffix",1)#)</strong></a></li>
-							 <li><a href="http://coldbox.ortusbooks.com"><i class="glyphicon glyphicon-book"></i> Help Manual</a></li>
-							 <li><a href="mailto:bugs@coldbox.org?subject=DataBoss Bug Report"><i class="glyphicon glyphicon-fire"></i> Report a Bug</a></li>
-							 <li><a href="mailto:info@coldbox.org?subject=DataBoss Feedback"><i class="glyphicon glyphicon-bullhorn"></i> Send Us Feedback</a></li>
-							 <li><a href="http://www.ortussolutions.com/products/coldbox"><i class="glyphicon glyphicon-home"></i> Professional Support</a></li>
-							 <li class="divider"></li>
-							 <li class="centered">
-							 	<img width="150" src="includes/images/ColdBoxLogo2015_300.png" alt="logo"/>
-							 </li>
-						</ul>
-					</li>
+					<cfif true>
+						<li><a href="#event.buildLink( "login" )#">Log In</a></li>
+						<li><a href="#event.buildLink( "signup" )#">Sign Up</a></li>
+					<cfelse>
+						<li class="dropdown">
+							<a href="##" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="glyphicon glyphicon-info-sign"></i> About <b class="caret"></b>
+							</a>
+							<ul id="actions-submenu" class="dropdown-menu">
+								 <li><a href=""><strong>#getSetting("codename",1)# (#getsetting("suffix",1)#)</strong></a></li>
+								 <li><a href="http://coldbox.ortusbooks.com"><i class="glyphicon glyphicon-book"></i> Help Manual</a></li>
+								 <li><a href="mailto:bugs@coldbox.org?subject=DataBoss Bug Report"><i class="glyphicon glyphicon-fire"></i> Report a Bug</a></li>
+								 <li><a href="mailto:info@coldbox.org?subject=DataBoss Feedback"><i class="glyphicon glyphicon-bullhorn"></i> Send Us Feedback</a></li>
+								 <li><a href="http://www.ortussolutions.com/products/coldbox"><i class="glyphicon glyphicon-home"></i> Professional Support</a></li>
+								 <li class="divider"></li>
+								 <li class="centered">
+								 	<img width="150" src="includes/images/ColdBoxLogo2015_300.png" alt="logo"/>
+								 </li>
+							</ul>
+						</li>
+					</cfif>
 				</ul>
 			</div>
 		</div> <!---end container --->
 	</nav> <!---end navbar --->
 
 	<!---Container And Views --->
-	<div class="container">#renderView()#</div>
+	<div class="container">
+		#wirebox.getInstance( "flashmessage@FlashMessage" ).render()#
+		#renderView()#
+	</div>
 
 	<footer class="footer">
 		<p class="pull-right">

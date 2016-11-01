@@ -19,6 +19,7 @@
 	}
 
 	// Your Application Routes
+	addRoute( "signup", "users", "new" );
 	addRoute(pattern=":handler/:action?");
 
 
