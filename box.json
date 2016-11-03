@@ -4,12 +4,12 @@
     "homepage":"https://github.com/elpete/integrated-workshop",
     "private":true,
     "installPaths":{
-        "testbox":"testbox",
         "coldbox":"coldbox",
         "integrated":"integrated",
         "flashmessage":"modules/flashmessage",
         "cborm":"modules/cborm",
-        "orm-reload-interceptor":"modules/orm-reload-interceptor"
+        "orm-reload-interceptor":"modules/orm-reload-interceptor",
+        "testbox":"testbox"
     },
     "dependencies":{
         "coldbox":"^4.3.0+188",
@@ -18,7 +18,7 @@
         "orm-reload-interceptor":"^1.0.2"
     },
     "devDependencies":{
-        "testbox":"^2.3.0+00044",
-        "integrated":"^3.0.2"
+        "integrated":"^3.0.2",
+        "testbox":"2.4.0-snapshot"
     }
 }

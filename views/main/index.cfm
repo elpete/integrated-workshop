@@ -1,4 +1,9 @@
 ﻿<cfoutput>
+<cfif flash.exists( "message" )>
+	<div class="alert alert-info">
+		#flash.get( "message" )#
+	</div>
+</cfif>
 <div class="jumbotron">
 	<div class="row">
 		<div class="col-md-5">

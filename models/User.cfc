@@ -6,9 +6,9 @@ component persistent="true" table="users" extends="cborm.models.ActiveEntity" {
 	property name="password";
 	
 	this.constraints = {
-		username = { required = true },
-		email = { required = true, type = "email", validator: "UniqueValidator@cborm" },
-		password = { required = true }
+		"username" = { required = true },
+		"email" = { required = true, type = "email", validator: "UniqueValidator@cborm" },
+		"password" = { required = true }
 	};
 	
 	function init() {
