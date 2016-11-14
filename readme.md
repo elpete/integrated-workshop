@@ -102,7 +102,7 @@ component extends="Integrated.BaseSpecs.ColdBoxBaseSpec" {
         describe( "a simple integrated base spec", function() {
             it( "can visit a page", function() {
                 this.visit( "/" )
-                	.see( "Welcome to ColdBox!" )
+                    .see( "Welcome to ColdBox!" )
             } );
         } );
     }
@@ -183,7 +183,7 @@ function submitted( event, rc, prc ) {
 <!--- views/main/simpleForm.cfm --->
 
 <cfoutput>
-    <form action="#event.buildLink( "" )#">
+    <form action="#event.buildLink( "main.submitted" )#">
         <input type="text" name="message" />
         <button type="submit">Submit</button>
     </form>
