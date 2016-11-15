@@ -369,6 +369,37 @@ Last step.  We want to make sure the user was actually created in the database. 
 
 We'll use ORM for this application to make this quick, but any approach would work fine.
 
+```bash
+box install cborm
+```
+
+```cfc
+// tests/Application.cfc
+
+// Set up Testing Datasource
+this.datasources[ "integrated_workshop" ] = {
+    class: 'org.h2.Driver',
+    connectionString: 'jdbc:h2:mem:integrated_workshop;MODE=MySQL',
+    username = "sa"
+};
+
+this.datasource = "integrated_workshop";
+
+// Set up ORM
+this.mappings[ "/cborm" ] = rootPath & "modules/cborm";
+
+this.ormEnabled = true;
+this.ormSettings = {
+    cfclocation = [ "models" ],
+    dbcreate = "dropcreate",
+    logSQL = true,
+    flushAtRequestEnd = false,
+    autoManageSession = false,
+    eventHandling = true,
+    eventHandler = "cborm.models.EventHandler"
+};
+```
+
 ```cfc
 // handlers/users.cfc
 
